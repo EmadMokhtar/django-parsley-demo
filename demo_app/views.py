@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views import generic
+from .forms import UserProfileForm
 
-# Create your views here.
+
+class IndexView(generic.FormView):
+    form_class = UserProfileForm
+    template_name = 'demo_app/user-form.html'

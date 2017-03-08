@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>User Profile Form</title>
+</head>
+<body>
+    <h1>User Profile Form</h1>
+    <form method="post" data-parsley-validate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="button">Submit</button>
+    </form>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.0/parsley.min.js"></script>
+</html>
